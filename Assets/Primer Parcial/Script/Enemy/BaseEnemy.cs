@@ -15,10 +15,11 @@ public class BaseEnemy : MonoBehaviour
         switch (obj.tag)
         {
             case "Player":
-               
+
                 {
                     Instantiate(prefabExplosion,
                         transform.position, Quaternion.identity);
+                    //obj.gameObject.GetComponent<A_PlayerController>().Die();
                     Destroy(obj);//TODO cambiar a gameover
                 }
                 break;
